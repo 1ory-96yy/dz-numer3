@@ -11,6 +11,7 @@ private:
 
 public:
     Lift(int lower, int upper);
+    Lift(const Lift& other); 
     ~Lift();
     void turnOn();
     void turnOff();
@@ -18,6 +19,8 @@ public:
     int getCurrentFloor() const;
     void call(int floor);
     static int getNumInstances();
+    Lift compareLift(const Lift& other) const; 
+    Lift nearestLift(int floor, const Lift& other) const;
 };
 
 #endif

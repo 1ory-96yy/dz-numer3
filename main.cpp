@@ -16,5 +16,11 @@ int main() {
     std::cout << "Lift 1 is currently on floor: " << lift1.getCurrentFloor() << std::endl;
     std::cout << "Lift 2 is currently on floor: " << lift2.getCurrentFloor() << std::endl;
 
+    Lift highestLift = lift1.compareLift(lift2);
+    std::cout << "The highest lift is on floor: " << highestLift.getCurrentFloor() << std::endl;
+
+    Lift nearest = lift1.nearestLift(3, lift2);
+    std::cout << "The nearest lift to floor 3 is on floor: " << nearest.getCurrentFloor() << std::endl;
+
     return 0;
 }
